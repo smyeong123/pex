@@ -1,7 +1,5 @@
 /**
  * comp2017 - assignment 3
- * Sangmyeong Lee
- * slee4736
  */
 
 #include "pe_exchange.h"

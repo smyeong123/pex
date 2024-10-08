@@ -1,11 +1,11 @@
 #include "pe_trader.h"
-//retest
+// re-test
 int order_num = 0;
 void handle_sig(int sig) {
     return;
 }
 void read_message(int read_fd, char *buff) {
-    //read message and if number of bytes is -1 print error.
+    // read message and if number of bytes is -1 print error.
     int num_read = read(read_fd, buff, 256);
     if (num_read == -1) {
         perror("invalid!");
@@ -13,8 +13,6 @@ void read_message(int read_fd, char *buff) {
 }
 
 int main(int argc, char ** argv) {
-	//TODO implement your trader program to be fault-tolerant.
-
     if (argc < 2) {
         printf("Not enough arguments\n");
         return 1;
@@ -57,11 +55,10 @@ int main(int argc, char ** argv) {
     memset(buff,0, 256);
     // event loop:
     while(1) {
-        //TODO
         // wait for exchange update (MARKET message)
         // send order
         // wait for exchange confirmation (ACCEPTED message)
-
+        
         //? wait until another message from market to come
         pause();
         /*
